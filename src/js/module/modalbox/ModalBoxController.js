@@ -117,24 +117,33 @@ export class ModalBoxController {
       }
       break
     case "editcollection":
-      let movieupdatedStr = ""
-      if (currentCollectionDetails.Movies.length > 0) {
-        movieupdatedStr = JSON.stringify(currentCollectionDetails.Movies)
+      let movieupdatedStr
+      if ($("#editcName").val().trim() === "") {
+        generic.showSnackBar("Please Enter Name", "error")
       }
-      const updateCollectionData = {
-        "Name": $("#editcName").val().trim(),
-        "Description": $("#editcDesc").val().trim(),
-        "Movies": movieupdatedStr,
+      else if ($("#editcDesc").val().trim() === "") {
+        generic.showSnackBar("Please Enter Description", "error")
       }
-      generic.showLoader()
-      jsonAPIService.putJsonData("http://localhost:3000/UserCollection/" + currentCollectionDetails.id, updateCollectionData).then((data) => {
-        if (data) {
-          store.dispatch({type: "EDIT_COLLECTION", dataItem: data})
-          generic.showSnackBar("Collection updated successfully", "success")
-          generic.removeModalBox("movielistInCollectionModal")
-          generic.hideLoader()
+      else {
+        if (currentCollectionDetails.Movies.length > 0) {
+          movieupdatedStr = JSON.stringify(currentCollectionDetails.Movies)
         }
-      })
+        const updateCollectionData = {
+          "Name": $("#editcName").val().trim(),
+          "Description": $("#editcDesc").val().trim(),
+          "Movies": movieupdatedStr,
+        }
+        generic.showLoader()
+        jsonAPIService.putJsonData("http://localhost:3000/UserCollection/" + currentCollectionDetails.id, updateCollectionData).then((data) => {
+          if (data) {
+            store.dispatch({type: "EDIT_COLLECTION", dataItem: data})
+            generic.showSnackBar("Collection updated successfully", "success")
+            generic.removeModalBox("movielistInCollectionModal")
+            generic.hideLoader()
+          }
+        })
+      }
+
       break
     case "deletecollection":
       generic.showLoader()
