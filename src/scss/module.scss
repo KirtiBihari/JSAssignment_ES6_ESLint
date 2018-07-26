@@ -1,0 +1,385 @@
+nav{
+    .container{
+
+        .navbar-brand{
+            img{
+                height: 1.8em;
+                width: 6em;
+                max-height: 2em;
+                max-width: 6em;
+                display: inline-block;
+            }
+        }
+        .nav-item a.nav-link{
+            font-size: 1.1rem;
+        }
+    }
+
+}
+
+.search_bar{
+    .search{
+        //width: 100%;
+        background-color: #fff;
+        height: 46px;
+        border-bottom: 1px solid #dedede;
+        margin-top: 10rem;
+        .search_form_container{
+            position: relative;
+            top: 0;
+            left: 0;
+            input[type='text']{
+                padding: 0 30px;
+                height: 46px;
+                width:80%;
+            }
+        }
+    }
+}
+main{
+    // margin-top: 4rem;
+    position: relative;
+    min-height: 62vh;
+    .linkdisabled{
+        pointer-events: none;
+        color: #ccc;
+    }
+    
+    #search{
+        position: sticky;
+        width: 100%;
+        top: 4rem;
+        background: #000000;
+        z-index: 9;
+        .container{
+            padding: 0;
+        }
+        .searchbox{
+            position: relative;
+            input[type='text']{
+                padding: 0 2.7rem 0 .3rem;
+                height: 3.5rem;
+                font-size: 1.3rem;
+            }
+            input[type='text']:hover{
+                background-color: #FFF;
+            }
+            .form-control{
+                line-height: 2.5;
+            }
+            .search-icon{
+                position: absolute;
+                top: 0;
+                right: 0px;
+                background-color: #343a40;
+                height: 100%;
+                border-bottom-right-radius: .2rem;
+                border-top-right-radius: .2rem;
+
+                i{
+                    font-size: 1.5em;
+                    color: #fff;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    
+    #popularlist{
+        .moviecard{
+            height: 18rem;
+        }
+        img{
+            width:100%;
+            height: 100%;
+        }
+        .info{
+            position: absolute;
+            bottom: .1rem;
+            width: 100%;
+            padding-left: 0.6rem;
+            background: #373c3c99;
+        }
+        .info-name{
+            font-size: 1.2rem;
+        }
+        .info-news{
+            font-size:.8rem;
+        }
+    }
+
+    #topcollection, #userCollectionListContent{
+        margin: 3rem 0 2rem 0;
+            h4{
+                display: inline;
+            }
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 2px solid rgb(52, 58, 64) !important;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            min-height: 10rem;
+        }
+        .card:hover{
+            border: 3px solid #057f90 !important;
+        }
+        .collection-tag{
+            background: #373c3c;
+            color: #fff;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .card-body{
+            font-weight: 500;
+            background: #bfbfbf;
+            min-height: 8rem;
+           .card-text{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 18px;
+            max-height: 90px;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+           }
+       
+        }
+        .action-tools{
+            padding: .2rem;
+            a{
+                padding: .1rem;
+                float: right;
+                margin-right: .1rem;
+                min-width: 2rem;
+                i{
+                    font-size: 1.5rem;
+                    padding: .2rem;
+                }
+            }
+        }
+        .btnContainer{
+            float: right;
+        }
+        .more{
+            span{
+                float: right;
+            }
+        }
+    }
+
+    #searchmoviesContent{
+        #search-movies{
+            .row{
+                margin: 0.5rem;
+                background: #00131b;
+                color: #fff;
+                padding-bottom: .5rem;
+                .image_content{
+                    padding: .1rem;
+                    width: 100%;
+                        height: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .percentage{
+                    height: 6rem;
+                    .c100 {
+                        position: relative;
+                        font-size: 45px;    
+                        width: 1em;
+                        height: 1em;
+                        border-radius: 50%;
+                        float: left;
+                        margin: 0.4em;
+                        background-color: #dfe8ed;
+                    }
+                    .text{
+                        padding: 14px;
+                    }
+                }
+                p{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    line-height: 18px;
+                    max-height: 72px;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                }
+                
+                a{
+                    padding-left: .3rem;
+                }
+            }
+        }
+    }
+    .movieDetailContent{
+        background-image: radial-gradient(circle at 20% 50%, rgba(12.94%, 14.90%, 22.75%, 0.98) 0%, rgba(12.94%, 14.90%, 22.75%, 0.88) 100%);
+        color: #fff;
+        .image_content{
+            width: 100%;
+            height: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .title{
+            width: 100%;
+            margin-bottom: 30px;
+
+            a{
+                display: inline-block;
+            }
+        }
+        .release_date{
+            opacity: 0.6;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-left: .2rem;
+            display: inline-block;
+        }
+
+        .actions{
+            display: flex;
+            padding: 0 !important;
+
+
+            li{
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+            }
+            .c100{
+                font-size: 3rem !important;
+                margin: 0 0.4em !important;
+
+            }
+
+            .editOption, .addfavorite, .rating{
+                background: #343a40;
+                border: 2px solid #6d6d6d;
+            }
+            .percentage{
+                width: 10rem;
+                .text{
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            .overview-content{
+                h3{
+                    font-weight: bold;
+                }
+            }
+        }
+        
+
+    }
+}
+
+#catmovielist{
+    border: 1px solid #6d6d6d;
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            list-style: none;
+            padding:.2rem;
+            background-color: #ccc;
+            margin-bottom: .1rem;
+            
+        }
+    }
+}
+
+#movielistInCollectionModal{
+    #mlist{
+        padding: 0;
+        .no-movies{
+            background-color: transparent !important;
+            color: #000 !important;
+        }
+        li{
+            list-style: none;
+            background-color: #343a40;
+            padding: .1rem;
+            border: 1px solid #6d6d6d;
+            color: #fff;
+            position: relative;
+            line-height: 2.4rem;
+            min-height: 4rem;
+            .mName{
+                width: 18rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding: .1rem;
+            }
+            .mImg{
+                display: inline;
+                .poster{
+                    height: 4rem;
+                    width: 4rem;
+                }
+            }
+            .btn-addtocol{
+                position: absolute;
+                right: .1rem;
+                top: .3rem;
+                padding: .4rem;
+                i{
+                    font-size: 2.4rem;
+                }
+            }
+
+        }
+    }
+}
+
+
+footer {
+    .copyright{
+        margin-bottom: 1rem;
+    }
+    #job
+    {
+        cursor: pointer;
+        max-width: 10rem;
+    }
+    .social-icon{
+        font-size:1.4rem;
+        cursor: pointer;
+    }
+    
+}
+
+@media only screen and (min-device-width : 768px){
+    #searchmoviesContent{
+        #search-movies{
+            .row{
+                min-height: 16rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px){
+    #userCollectionListContent{
+        h4{
+            font-size: 1.2rem;
+        }
+        .btnContainer a{
+            padding: .3rem;
+        }
+    }
+}
