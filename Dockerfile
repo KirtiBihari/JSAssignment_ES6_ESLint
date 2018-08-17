@@ -19,8 +19,10 @@ RUN npm install
 # You can pick individual files based on your need
 COPY . .
 
-RUN node server.js
+
 RUN npm run build
+ADD run.sh /run.sh
+ENTRYPOINT ["bash", "/run.sh"]
   
 # Start the Node.js app on load
 CMD [ "npm", "start" ]
