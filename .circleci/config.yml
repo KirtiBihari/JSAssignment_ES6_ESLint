@@ -68,8 +68,8 @@ workflows:
       #       branches:
       #         only: master
       - deploy:
-          # requires:
-          #   - test
+          requires:
+            - build1
           filters:
             branches:
               only: master
