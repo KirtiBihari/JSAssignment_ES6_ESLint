@@ -18,7 +18,8 @@ RUN npm install
 # Copy contents of local folder to `WORKDIR`
 # You can pick individual files based on your need
 COPY . .
- 
+
+RUN json-server --watch db.json
 RUN npm run build
   
 # Start the Node.js app on load
