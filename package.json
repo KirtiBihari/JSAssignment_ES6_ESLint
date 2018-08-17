@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --host 0.0.0.0 --watch",
+    "start": "concurrently \"node server.js\" \"webpack-dev-server --host 0.0.0.0\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
