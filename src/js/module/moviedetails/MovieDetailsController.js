@@ -24,11 +24,14 @@ export class MovieDetailsController {
     const modalColComboBox = $(".form-row #selcolletion")
     modalColComboBox.html("")
     const collectionList = getCollectionStateData()
-    for (const i of collectionList) {
-      modalColComboBox.append(`<option id="copt${i.id}">
-        ${i.Name}
-        </option>`)
+    if(collectionList.length > 0){
+      for (const i of collectionList) {
+        modalColComboBox.append(`<option id="copt${i.id}">
+          ${i.Name}
+          </option>`)
+      }
     }
+    
     if (collectionList.length === 0) {
       $("#btn-submit").prop("disabled", true)
     }
